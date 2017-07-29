@@ -19,8 +19,17 @@ app.get('/dragons', (req, res) => {
   })
 })
 
-app.post('/dragons', (req, res) => {
+app.post('/login', (req, res) => {
+  res.redirect('/app/');
+})
 
+app.post('/dragons', (req, res) => {
+  console.log(req.body)
+  // dragons.push(addDragon);
+  // fs.writeFile('./data/dragons.json', 'utf8')
+  res.send({
+    dragons: dragons
+  })
 })
 
 
