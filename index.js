@@ -25,8 +25,8 @@ app.post('/login', (req, res) => {
 
 app.post('/dragons', (req, res) => {
   console.log(req.body)
-  // dragons.push(addDragon);
-  // fs.writeFile('./data/dragons.json', 'utf8')
+  dragons.push(addDragon);
+  fs.writeFile('./data/dragonjson', 'utf8')
   res.send({
     dragons: dragons
   })
